@@ -11,6 +11,6 @@ RUN bash miniconda.sh -b -p /root/miniconda
 RUN rm /miniconda.sh
 
 ENV PATH="/root/miniconda/bin:$PATH"
-RUN /root/miniconda/bin/conda config --set always_yes yes --set changeps1 no
+RUN /root/miniconda/bin/conda config --set always_yes yes   # --set changeps1 no
 RUN /root/miniconda/bin/conda update -q conda
 RUN /root/miniconda/bin/conda info -a

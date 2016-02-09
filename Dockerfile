@@ -13,8 +13,8 @@ RUN wget http://repo.continuum.io/miniconda/Miniconda3-3.7.3-Linux-x86_64.sh  -O
 
 ENV PATH="/root/miniconda/bin:$PATH"
 
-RUN /root/miniconda/bin/conda config --set always_yes
-RUN /root/miniconda/bin/conda config --set changeps1 yes
+RUN /root/miniconda/bin/conda config --set always_yes True
+RUN /root/miniconda/bin/conda config --set changeps1 True
 RUN /root/miniconda/bin/condagit config push.default simple
 
 RUN /root/miniconda/bin/conda update -q conda && \

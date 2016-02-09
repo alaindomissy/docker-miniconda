@@ -5,8 +5,9 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # System packages
 RUN apt-get update && \
-    apt-get install -y wget git && \
-    git config push.default simple
+    apt-get install -y wget git
+
+#RUN git config push.default simple
 
 RUN wget http://repo.continuum.io/miniconda/Miniconda3-3.7.3-Linux-x86_64.sh  -O miniconda.sh && \
     bash miniconda.sh -b -p /root/miniconda && \
